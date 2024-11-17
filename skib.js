@@ -40,3 +40,8 @@ function start_timer(time) {
     }
 
 }
+
+function stop_audio() {
+    audio.pause();
+    audio.currentTime = 0;
+}
