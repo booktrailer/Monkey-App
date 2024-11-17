@@ -1,5 +1,6 @@
-var times = [60, 180, 300];
+var times = [5, 60, 180, 300];
 var timer_running = false
+var audio = new Audio('lose-sound.mp3');
 
 function load_times() {
     
@@ -24,14 +25,15 @@ function start_timer(time) {
 
         console.log('gotpastpart1!!! yay');
 
-        setInterval(function() {
+        var timerz = setInterval(function() {
             curr_time--;
             time_num.innerHTML = String(curr_time);
 
             if (curr_time <= 0) {
-                clearInterval(timerInterval)
+                clearInterval(timerz);
                 time_num.innerHTML = 'times up!!!';
-                timer_running = false
+                timer_running = false;
+                audio.play();
             }
         }, 1000);
 
