@@ -1,27 +1,32 @@
 var times = [60, 180, 300];
-button_list = []
-button_elements = []
-button_list = document.getElementById('button_container');
 
 function load_times() {
     
     var button_html = '';
     for (let i = 0; i < times.length; i++) {
-        if (!(button_list.includes('button' + times[i].toString()))) {
-        button_html += '<button id="button' + times[i].toString() + '">' + (times[i]/60).toString() + ' minut</button>';
-        button_list.push('button' + times[i].toString())
-
-        button_list.innerHTML = button_html;
-        button_elements.push(document.getElementById('button' + times[i].toString()));
+        button_html += '<button id="button' + times[i].toString() + '" onclick="start_timer(' + times[i] + ')">' + (times[i]/60).toString() + ' minut</button>';
         }
+    
+    var button_container = document.getElementById('button_container')
+    button_container.innerHTML = button_html;
+}
+
+function start_timer(time) {
+    var time_num = document.getElementById('time_num')
+    var curr_time = time;
+    time_num.innerHTML = toString(curr_time);
+    var curr_old_val = curr_time;
+
+    setInterval(function() {
+        curr_time--;
+    }, 1000);
+
+    while ( curr_time >= 0) {
+        if (curr_old_val != curr_time) {
+            curr_old_val = curr_time;
+            time_num.innerHTML = toString(curr_time);
+        }
+
+    time_num.innerHTML = 'times up!!!';
     }
-
-    console.log(times)
-    console.log(button_list)
-    console.log(button_elements)
-
-    
-
-    
-    button_list.innerHTML = button_html;
 }
