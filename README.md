@@ -1,2 +1,1 @@
-this is a monkey app.
-I am learning node.js and I have NO IDEA how it works 😢😢😢
+I am making a timer app that has set amounts + custom start thingys
