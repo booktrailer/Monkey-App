@@ -61,6 +61,10 @@ function update_timer() {
 function stop_audio() {
     audio.pause();
     audio.currentTime = 0;
+    
+    if (!(timer_running)) {
+        document.getElementById('time_num').innerHTML = '0';
+    }
 }
 
 function new_time() {
@@ -78,7 +82,7 @@ function new_time() {
 
 function cancel() {
     clearInterval(the_interval);
-    document.getElementById('time_num').innerHTML = 'cancelled successfully';
+    document.getElementById('time_num').innerHTML = '0';
     timer_running = false;
 }
 
