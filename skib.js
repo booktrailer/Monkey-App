@@ -64,4 +64,5 @@ function new_time() {
 function cancel() {
     clearInterval(the_interval);
     time_num.innerHTML = 'cancelled successfully';
+    timer_running = false;
 }
