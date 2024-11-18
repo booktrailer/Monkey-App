@@ -1,26 +1,26 @@
 <html>
     <header>
         <script src="skib.js"></script>
+        <link rel="stylesheet" href="style.css">
     </header>
     <body onload="load_times()">
         <h1>Timer</h1>
-        <p>this is a timer</p>
+        <p>This is a timer</p>
 
         <div id="button_container"></div>
 
         <h1><div id="time_num">Timer starting...</div></h1>
 
-        <button onclick="stop_audio()">stop audio</button>
+        <button onclick="stop_audio()">Stop Audio</button>
         
-        <label for="custom_input">Add custom time</label>
+        <label for="custom_input">Add Custom Time</label>
         <input id="custom_input" type="number">
         <button onclick="new_time()">Submit</button>
 
-        <button onclick="cancel()">cancel</button>
-
-        <button onclick="pause()">pause</button>
-
-
-
+        <!-- Add a container for cancel and pause buttons -->
+        <div class="action-buttons">
+            <button onclick="cancel()">Cancel</button>
+            <button onclick="pause()">Pause</button>
+        </div>
     </body>
 </html>

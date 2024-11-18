@@ -8,7 +8,20 @@ var curr_time = 0; // Global variable to track remaining time
 function load_times() {
     var button_html = '';
     for (let i = 0; i < times.length; i++) {
-        button_html += '<button id="button' + times[i].toString() + '" onclick="start_timer(' + times[i] + ')">' + times[i].toString() + ' seconds' + '</button>';
+        var content = '';
+
+        if (times[i] >= 60) {
+            if (times[i]%60 == 0) {
+                content = (times[i]/60).toString() + ' minutes';
+            } else {
+                minutes = Math.floor(times[i]/60);
+                content = String(minutes) + ' minutes ' + String(times[i] - 60*minutes) + ' seconds';
+            }
+        } else {
+            content = String(times[i]) + ' seconds';
+        }
+
+        button_html += '<button id="button' + times[i].toString() + '" onclick="start_timer(' + times[i] + ')">' + content + '</button>';
     }
     var button_container = document.getElementById('button_container');
     button_container.innerHTML = button_html;
