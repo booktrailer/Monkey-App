@@ -3,7 +3,10 @@ var timer_running = false;
 var audio = new Audio('lose-sound.mp3');
 var the_interval = null;
 var paused = false;
-var curr_time = 0; // Global variable to track remaining time
+var orig_time = 0; // Global variable to track remaining time
+var req_time = null;
+var time_left = 0; // remaining time
+
 
 function load_times() {
     var button_html = '';
@@ -32,24 +35,41 @@ function start_timer(time) {
         timer_running = true;
         console.log('started');
 
+        orig_time = (Date.now())/1000; // big number when time starts
+        req_time = time; // Assign the required time to the global variable
+
+        // set the html inner thing
         var time_num = document.getElementById('time_num');
-        curr_time = time; // Assign the time to the global variable
-        time_num.innerHTML = String(curr_time);
+        time_num.innerHTML = String(req_time);
+        
 
         console.log('got past part 1!!! yay');
 
         paused = false;
+
+        // interval for checking curr time vs big time
         the_interval = setInterval(update_timer, 1000);
     }
 }
 
 function update_timer() {
     if (!paused) {
-        curr_time--;
-        var time_num = document.getElementById('time_num');
-        time_num.innerHTML = String(curr_time);
+        // set change
+        var curr_time = (Date.now())/1000;
+        var changed = Math.floor(curr_time - orig_time);
+        time_left = req_time - changed;
 
-        if (curr_time <= 0) {
+        // log stuff
+        console.log(curr_time);
+        console.log(changed);
+        console.log(time_left);
+
+        // do the html thing
+        var time_num = document.getElementById('time_num');
+        time_num.innerHTML = String(time_left);
+
+        // if time is up
+        if (time_left <= 0) {
             clearInterval(the_interval);
             time_num.innerHTML = 'times up!!!';
             timer_running = false;
@@ -91,11 +111,17 @@ function pause() {
         if (paused) {
             console.log('Resuming timer');
             paused = false;
+
+            // countdown from a new time
+            orig_time = (Date.now())/1000;
+
             the_interval = setInterval(update_timer, 1000);
         } else {
             console.log('Pausing timer');
             paused = true;
             clearInterval(the_interval);
+
+            req_time = time_left;
         }
     }
 }
