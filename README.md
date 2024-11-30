@@ -1,1 +1,1 @@
-I am making a timer app that has set amounts + custom start thingys
+I created a timer using html and javascript. The timer uses buttons that have predetermined times, and you can add your own times. The timer can also be paused or canceled. This is my first project that I did on my own, and it was pretty straightforward to code. The only issues I had were the javascript setInterval() not working with a different tab open and me forgetting many javascript syntaxes.
