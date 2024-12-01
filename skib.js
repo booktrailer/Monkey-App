@@ -1,4 +1,3 @@
-var times = [5, 60, 180, 300];
 var timer_running = false;
 var audio = new Audio('lose-sound.mp3');
 var the_interval = null;
@@ -6,9 +5,33 @@ var paused = false;
 var orig_time = 0; // Global variable to track remaining time
 var req_time = null;
 var time_left = 0; // remaining time
+var times = 'not skib';
 
+function resetTimes() {
+    // testing
+    times = [5, 60, 180, 300];
+    load_times();
+}
+
+// get the saved times
+function startup_times() {
+    times = localStorage.getItem('times');
+    console.log(times);
+    if (!(times)) {
+        console.log(times);
+        console.log('not skib');
+        times = [5, 60, 180, 300];
+        localStorage.setItem('times', JSON.stringify(times));
+    } else {
+        times = JSON.parse(times);
+    }
+
+    load_times();
+}
 
 function load_times() {
+    localStorage.setItem('times', JSON.stringify(times));
+
     var button_html = '';
     for (let i = 0; i < times.length; i++) {
         var content = '';
@@ -24,10 +47,23 @@ function load_times() {
             content = String(times[i]) + ' seconds';
         }
 
-        button_html += '<button id="button' + times[i].toString() + '" onclick="start_timer(' + times[i] + ')">' + content + '</button>';
+        button_html += '<button id="button' + times[i].toString() + '" onclick="start_timer(' + times[i] + ')" oncontextmenu="deleteButton(' + times[i].toString() + '); return false">' + content + '</button>';
     }
     var button_container = document.getElementById('button_container');
     button_container.innerHTML = button_html;
+}
+
+function deleteButton(button_id) {
+    var deleting_button = document.getElementById('button' + button_id);
+    deleting_button.remove();
+
+    var delete_index = times.indexOf(button_id);
+
+    if (delete_index > -1) { // only splice array when item is found
+        times.splice(delete_index, 1); 
+    }
+
+    load_times();
 }
 
 function start_timer(time) {
@@ -94,7 +130,7 @@ function new_time() {
 
     if (custom_input.value > 0) {
         console.log('greater');
-        times.push(custom_input.value);
+        times.push(parseInt(custom_input.value));
         console.log(times);
         load_times();
     }
