@@ -1,12 +1,18 @@
 <html>
     <header>
         <script src="skib.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <div id="stylestuff"><link rel="stylesheet" href="red.css"></div>
     </header>
     <body onload="startup_times()">
         <h1>Timerly!</h1>
         <p>An easy and simple timer for any purpose</p>
         <p>(Right click to delete times)</p>
+
+        <div id="theme-buttons">
+            <button onclick="swap_theme('light-blue')">Light Blue Theme</button>
+            <button onclick="swap_theme('red')">Red Theme</button>
+            <button onclick="swap_theme('teal')">Teal Theme</button>
+        </div>
 
         <div id="button_container"></div>
 

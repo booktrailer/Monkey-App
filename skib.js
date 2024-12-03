@@ -6,6 +6,7 @@ var orig_time = 0; // Global variable to track remaining time
 var req_time = null;
 var time_left = 0; // remaining time
 var times = 'not skib';
+var theTheme = 'no theme';
 
 function resetTimes() {
     // testing
@@ -27,6 +28,21 @@ function startup_times() {
     }
 
     load_times();
+
+    // load the themes
+    var loaded_themes = localStorage.getItem('themes');
+    console.log(loaded_themes);
+    if (!(loaded_themes)) {
+        console.log('not skib');
+        theTheme = 'red';
+        localStorage.setItem('themes', theTheme);
+    } else {
+        theTheme = loaded_themes;
+    }
+
+    set_theme()
+
+
 }
 
 function load_times() {
@@ -160,4 +176,21 @@ function pause() {
             req_time = time_left;
         }
     }
+}
+
+function swap_theme(theme) {
+    theTheme = theme;
+    set_theme();
+}
+
+function set_theme() {
+    var styles = document.getElementById('stylestuff');
+    if (theTheme == null) {
+        theTheme = 'red';
+        styles.innerHTML = '<link rel="stylesheet" href="' + theTheme + '.css">';
+    } else {
+        styles.innerHTML = '<link rel="stylesheet" href="' + theTheme + '.css">';
+    }
+    localStorage.setItem('themes', theTheme);
+    console.log(theTheme)
 }

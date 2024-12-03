@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #2b1a1a;
+    color: #f0e6e6;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1 {
+    color: #ff5c5c;
+    margin-top: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #f8dede;
+}
+
+/* Timer Display */
+#time_num {
+    font-size: 2.5em;
+    color: #ff7b7b;
+    font-weight: bold;
+    margin: 20px auto;
+    padding: 15px;
+    width: 200px;
+    border: 3px solid #a83c3c;
+    border-radius: 10px;
+    background-color: #441c1c;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: inline-block;
+}
+
+/* Button Container */
+#button_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #a83c3c;
+    color: #f0e6e6;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff5c5c;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #7a2929;
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    background-color: #d46f4d;
+}
+
+.action-buttons button:hover {
+    background-color: #ff7b7b;
+}
+
+.action-buttons button:active {
+    background-color: #a83c3c;
+}
+
+/* Input Styles */
+label {
+    display: block;
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+    color: #ff9999;
+}
+
+input[type="number"] {
+    margin: 10px 0 20px;
+    padding: 10px;
+    font-size: 1em;
+    width: 50%;
+    border: 2px solid #a83c3c;
+    border-radius: 5px;
+    background-color: #3c2323;
+    color: #f8dede;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #ff5c5c;
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #button_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    input[type="number"] {
+        width: 80%;
+    }
+}
