@@ -1,1 +1,3 @@
 This project is a timer uses buttons that the user can click to start the timer. The timer can also be paused or canceled, and right-clicking the buttons will delete them. You can add your own times in a form.
+
+Compaired to the many other ugly and ad-hungry options out there, this website is extremely easy to use. Search up "timer" and go to one that is not the google one and you'll know what I mean.
