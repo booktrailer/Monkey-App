@@ -2,42 +2,43 @@
 
 /* General Styles */
 body {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background: #2b1a1a;
-    color: #f0e6e6;
+    background: #2c1f3b; /* Deep purple for the background */
+    color: #fdf6e3;
     line-height: 1.6;
     text-align: center;
 }
 
 h1 {
-    color: #ff5c5c;
+    color: #ff7e5f; /* Warm orange for heading */
     margin-top: 20px;
     font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 p {
     font-size: 1.1em;
     margin-bottom: 20px;
-    color: #f8dede;
+    color: #f8d9b6; /* Light tan for text */
 }
 
 /* Timer Display */
 #time_num {
     font-size: 2.5em;
-    color: #ff7b7b;
+    color: #ffd56b; /* Soft yellow for numbers */
     font-weight: bold;
     margin: 20px auto;
     padding: 15px;
     width: 200px;
-    border: 3px solid #a83c3c;
+    border: 3px solid #ff7e5f; /* Warm orange border */
     border-radius: 10px;
-    background-color: #441c1c;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-color: #522546; /* Dark plum background */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Button Container */
@@ -58,18 +59,18 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #a83c3c;
-    color: #f0e6e6;
+    background-color: #ff7e5f; /* Warm orange */
+    color: #2c1f3b; /* Dark background */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #ff5c5c;
+    background-color: #ffb07c; /* Lighter orange for hover */
     transform: scale(1.05);
 }
 
 button:active {
-    background-color: #7a2929;
+    background-color: #d66349; /* Deeper orange for active state */
 }
 
 /* Action Buttons */
@@ -78,15 +79,15 @@ button:active {
 }
 
 .action-buttons button {
-    background-color: #d46f4d;
+    background-color: #f9a09a; /* Soft pinkish red */
 }
 
 .action-buttons button:hover {
-    background-color: #ff7b7b;
+    background-color: #ff7e5f;
 }
 
 .action-buttons button:active {
-    background-color: #a83c3c;
+    background-color: #d66349;
 }
 
 /* Input Styles */
@@ -94,7 +95,7 @@ label {
     display: block;
     font-size: 1.1em;
     margin: 20px 0 10px;
-    color: #ff9999;
+    color: #ffd56b; /* Soft yellow for labels */
 }
 
 input[type="number"] {
@@ -102,16 +103,16 @@ input[type="number"] {
     padding: 10px;
     font-size: 1em;
     width: 50%;
-    border: 2px solid #a83c3c;
+    border: 2px solid #ff7e5f;
     border-radius: 5px;
-    background-color: #3c2323;
-    color: #f8dede;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: #3e2747; /* Dark plum for input fields */
+    color: #fdf6e3;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
     transition: border-color 0.3s ease;
 }
 
 input[type="number"]:focus {
-    border-color: #ff5c5c;
+    border-color: #ffd56b; /* Soft yellow for focus state */
     outline: none;
 }
 

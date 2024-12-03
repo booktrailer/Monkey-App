@@ -2,41 +2,42 @@
 
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
-    color: #333;
+    background: #2f3e46; /* Deep forest green */
+    color: #d9e4dd; /* Soft mint for text */
     line-height: 1.6;
     text-align: center;
 }
 
 h1 {
-    color: #2c3e50;
+    color: #a7c957; /* Fresh green for heading */
     margin-top: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 p {
     font-size: 1.1em;
     margin-bottom: 20px;
-    color: #7f8c8d;
+    color: #c9d6ca; /* Muted greenish-gray */
 }
 
 /* Timer Display */
-/* Timer Display */
 #time_num {
     font-size: 2.5em;
-    color: #e74c3c;
+    color: #e9f3ec; /* Soft off-white */
     font-weight: bold;
     margin: 20px auto;
-    padding: 15px; /* Space inside the box */
-    width: 200px; /* Fixed width for consistency */
-    border: 3px solid #3498db; /* Blue border */
-    border-radius: 10px; /* Rounded corners */
-    background-color: #ecf0f1; /* Light background color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    text-align: center; /* Center the text inside the box */
-    display: inline-block; /* Keeps it from stretching full width */
+    padding: 15px;
+    width: 200px;
+    border: 3px solid #a7c957; /* Fresh green border */
+    border-radius: 10px;
+    background-color: #4c5c68; /* Muted teal background */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: inline-block;
 }
 
 /* Button Container */
@@ -57,36 +58,35 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #3498db;
-    color: #fff;
-    transition: background-color 0.3s ease;
+    background-color: #6b8e23; /* Earthy olive green */
+    color: #f4f5f3; /* Off-white text */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #556b2f; /* Darker olive green */
+    transform: scale(1.05);
 }
 
 button:active {
-    background-color: #1c598a;
+    background-color: #404d21; /* Deep forest green */
 }
 
 /* Action Buttons */
 .action-buttons {
-    margin-top: 20px; /* Adds space before the cancel and pause buttons */
+    margin-top: 20px;
 }
 
 .action-buttons button {
-    display: inline-block;
-    margin: 10px 5px;
-    background-color: #e67e22; /* Different color for action buttons */
+    background-color: #9dc88d; /* Soft sage green */
 }
 
 .action-buttons button:hover {
-    background-color: #d35400;
+    background-color: #7ba774;
 }
 
 .action-buttons button:active {
-    background-color: #a84300;
+    background-color: #5a7a54;
 }
 
 /* Input Styles */
@@ -94,7 +94,7 @@ label {
     display: block;
     font-size: 1.1em;
     margin: 20px 0 10px;
-    color: #2c3e50;
+    color: #a7c957; /* Fresh green for labels */
 }
 
 input[type="number"] {
@@ -102,14 +102,16 @@ input[type="number"] {
     padding: 10px;
     font-size: 1em;
     width: 50%;
-    border: 1px solid #bdc3c7;
+    border: 2px solid #a7c957;
     border-radius: 5px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #3e5155; /* Muted teal-gray */
+    color: #e9f3ec;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
     transition: border-color 0.3s ease;
 }
 
 input[type="number"]:focus {
-    border-color: #3498db;
+    border-color: #9dc88d; /* Sage green for focus */
     outline: none;
 }
 

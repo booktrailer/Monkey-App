@@ -1,0 +1,86 @@
+/* Theme Buttons Container */
+#theme-buttons {
+    margin: 20px auto;
+    padding: 20px;
+    width: fit-content;
+    border: 2px solid #ccc; /* Neutral border */
+    border-radius: 10px; /* Rounded edges */
+    background-color: #f9f9f9; /* Subtle light background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+}
+
+/* Theme Button Styles */
+#theme-buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff; /* Default text color */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Light Blue Theme */
+#theme-buttons button:nth-child(1) {
+    background-color: #3498db; /* Light Blue */
+    font-family: 'Arial', sans-serif;
+}
+
+#theme-buttons button:nth-child(1):hover {
+    background-color: #2980b9; /* Darker Light Blue */
+}
+
+/* Red Theme */
+#theme-buttons button:nth-child(2) {
+    background-color: #e74c3c; /* Red */
+    font-family: 'Verdana', sans-serif;
+}
+
+#theme-buttons button:nth-child(2):hover {
+    background-color: #c0392b; /* Darker Red */
+}
+
+/* Teal Theme */
+#theme-buttons button:nth-child(3) {
+    background-color: #00b4d8; /* Teal */
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#theme-buttons button:nth-child(3):hover {
+    background-color: #0077b6; /* Darker Teal */
+}
+
+/* Sunset Theme */
+#theme-buttons button:nth-child(4) {
+    background-color: #ff7e5f; /* Sunset Orange */
+    font-family: 'Georgia', serif;
+}
+
+#theme-buttons button:nth-child(4):hover {
+    background-color: #d66349; /* Darker Sunset */
+}
+
+/* Button Hover Effect */
+#theme-buttons button:hover {
+    transform: scale(1.05);
+}
+
+#theme-buttons button:active {
+    transform: scale(0.95);
+}
+
+/* Forest Green Theme */
+#theme-buttons button:nth-child(5) {
+    background-color: #6b8e23; /* Olive green */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#theme-buttons button:nth-child(5):hover {
+    background-color: #556b2f; /* Darker olive green */
+}
+
+#theme-buttons button:nth-child(5):active {
+    background-color: #404d21; /* Deep forest green */
+}

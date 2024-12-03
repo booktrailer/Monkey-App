@@ -40,7 +40,7 @@ function startup_times() {
         theTheme = loaded_themes;
     }
 
-    set_theme()
+    set_theme();
 
 
 }
@@ -123,7 +123,7 @@ function update_timer() {
         // if time is up
         if (time_left <= 0) {
             clearInterval(the_interval);
-            time_num.innerHTML = 'times up!!!';
+            time_num.innerHTML = '!!!';
             timer_running = false;
             audio.play();
         }
