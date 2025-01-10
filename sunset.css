@@ -18,6 +18,17 @@ h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
+h2 {
+    color: #ff7e5f; /* Warm orange */
+    font-size: 2em;
+    margin-top: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Glowing shadow */
+    font-family: 'Georgia', serif; /* Elegant and timeless */
+    border-bottom: 2px solid #d66349; /* Deep orange underline */
+    padding-bottom: 5px;
+}
+
+
 p {
     font-size: 1.1em;
     margin-bottom: 20px;

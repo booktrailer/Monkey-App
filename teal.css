@@ -19,6 +19,16 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+h2 {
+    color: #00b4d8; /* Bright teal */
+    font-size: 2em;
+    margin-top: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-family: 'Helvetica Neue', sans-serif; /* Sleek and modern */
+    border-bottom: 2px solid #0077b6; /* Dark teal underline */
+    padding-bottom: 5px;
+}
+
 p {
     font-size: 1.1em;
     margin-bottom: 20px;

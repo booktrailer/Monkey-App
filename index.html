@@ -1,12 +1,17 @@
 <html>
-    <header>
+    <head>
+        <div id="webpage-title"><title>Timerly</title></div>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
         <script src="skib.js"></script>
         <div id="stylestuff"><link rel="stylesheet" href="red.css"></div>
-    </header>
+
+    </head>
     <body onload="startup_times()">
         <h1>Timerly!</h1>
         <p>An easy and simple timer for any purpose</p>
         <p>(Right click to delete times)</p>
+        <img src="favicon.ico" alt="">
 
         <div id="button_container"></div>
 
@@ -19,7 +24,7 @@
             <button onclick="cancel()">Cancel</button>
             <button onclick="pause()">Pause</button>
         </div>
-        
+
         <label for="custom_input">Add Custom Time</label>
         <input id="custom_input" type="number">
         <button onclick="new_time()">Submit</button>
@@ -31,5 +36,8 @@
             <button onclick="swap_theme('sunset')">Sunset Theme</button>
             <button onclick="swap_theme('forest')">Forest Theme</button>
         </div>
+
+        <!-- upload sounds -->
+        
     </body>
 </html>

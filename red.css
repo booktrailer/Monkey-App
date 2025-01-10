@@ -18,6 +18,16 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+h2 {
+    color: #e74c3c; /* Vibrant red */
+    font-size: 2em;
+    margin-top: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    font-family: 'Verdana', sans-serif; /* Bold and timeless */
+    border-bottom: 2px solid #c0392b; /* Deep red underline */
+    padding-bottom: 5px;
+}
+
 p {
     font-size: 1.1em;
     margin-bottom: 20px;
