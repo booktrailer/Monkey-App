@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Timerly</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <script src="skib.js"></script>
+        <div id="stylestuff"><link rel="stylesheet" href="red.css"></div>
+
+    </head>
+    <body onload="startup_times()">
+        <h1>Timerly!</h1>
+        <p>An easy and simple timer for any purpose</p>
+        <p>(Right click to delete times)</p>
+
+        <div id="button_container"></div>
+
+        <h1><div id="time_num">0</div></h1>
+
+        <button onclick="stop_audio()">Stop Audio</button>
+
+        <!-- Add a container for cancel and pause buttons -->
+        <div class="action-buttons">
+            <button onclick="cancel()">Cancel</button>
+            <button onclick="pause()">Pause</button>
+        </div>
+
+        <label for="custom_input">Add Custom Time</label>
+        <input id="custom_input" type="number">
+        <button onclick="new_time()">Submit</button>
+
+        <div id="theme-buttons">
+            <button onclick="swap_theme('light-blue')">Beach Theme</button>
+            <button onclick="swap_theme('red')">Dragon Theme</button>
+            <button onclick="swap_theme('teal')">Modern Theme</button>
+            <button onclick="swap_theme('sunset')">Sunset Theme</button>
+            <button onclick="swap_theme('forest')">Forest Theme</button>
+        </div>
+
+        <!-- upload sounds -->
+        
+    </body>
+</html>

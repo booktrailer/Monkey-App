@@ -24,5 +24,5 @@ function minutesSplit(number) {
     } else {
         content = String(times[i]) + ' sec';
     }
-    return content
+    return content;
 }

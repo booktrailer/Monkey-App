@@ -30,7 +30,6 @@ function startup_times() {
     }
 
     load_times();
-    getFile();
 
     // load the themes
     var loaded_themes = localStorage.getItem('themes');
@@ -65,7 +64,8 @@ function load_times() {
     for (let i = 0; i < times.length; i++) {
         var content = '';
 
-        if (times[i] >= 60) {
+        content = toTimeFormat(times[i]);
+        /*if (times[i] >= 60) {
             if (times[i]%60 == 0) {
                 content = (times[i]/60).toString() + ' minutes';
             } else {
@@ -74,7 +74,7 @@ function load_times() {
             }
         } else {
             content = String(times[i]) + ' sec';
-        }
+        }*/
 
         button_html += '<button id="button' + times[i].toString() + '" onclick="start_timer(' + times[i] + ')" oncontextmenu="deleteButton(' + times[i].toString() + '); return false">' + content + '</button>';
     }
@@ -105,7 +105,8 @@ function start_timer(time) {
 
         // set the html inner thing
         var time_num = document.getElementById('time_num');
-        time_num.innerHTML = String(req_time);
+        //changed totimeformat
+        time_num.innerHTML = toTimeFormat(req_time);
         
 
         console.log('got past part 1!!! yay');
@@ -131,11 +132,11 @@ function update_timer() {
 
         // do the html thing
         var time_num = document.getElementById('time_num');
-        time_num.innerHTML = String(time_left);
+        // ToTimeFormat
+        time_num.innerHTML = toTimeFormat(time_left);
 
         // change header
-        var header_text = document.getElementById('webpage-title');
-        document.title = String(time_left);
+        document.title = toTimeFormat(time_left);
 
         // if time is up
         if (time_left <= 0) {
@@ -154,8 +155,7 @@ function stop_audio() {
     if (!(timer_running)) {
         document.getElementById('time_num').innerHTML = '0';
 
-        var header_text = document.getElementById('webpage-title');
-        header_text.innerHTML = '<title>Timerly</title>';
+        document.title = "Timerly";
     }
 }
 
@@ -176,9 +176,9 @@ function cancel() {
     clearInterval(the_interval);
     document.getElementById('time_num').innerHTML = '0';
     timer_running = false;
+    stop_audio();
 
-    var header_text = document.getElementById('webpage-title');
-    header_text.innerHTML = '<title>Timerly</title>';
+    document.title = "Timerly";
 }
 
 function pause() {
@@ -222,6 +222,7 @@ function set_theme() {
 // THIS IS STUFF FOR UPLOAD SOUND, DOES NOT WORK
 /////////////////////////////////////////////////////////////////////////////////////
 
+/*
 
 // called from button press
 function upload_sound() {
@@ -298,10 +299,11 @@ function setSoundJSON(file) {
     } catch (e) {
         alert('upload failed, check file size or format');
     }
-}*/
+}
+*/
 
 // run on startup
-function getFile() {
+/*function getFile() {
     var sound = localStorage.getItem('sounds');
     if (!(sound)) {
         setSoundJSON(audio_file);
@@ -309,7 +311,7 @@ function getFile() {
         audio = new Audio(base64toFile(sound));
         audio_file = base64toFile(sound);
     }
-}
+}*/
 
 function base64toFile(base64){
     // set Base64 string
@@ -349,9 +351,46 @@ function base64toFile(base64){
     */
 }
 
-
+/*
 // play sound
 function playSound() {
     audio.play();
     console.log('audio played');
+}
+*/
+
+
+////////////////////////////////////////////////////////////////////////////
+//////// Change Seconds to proper format
+////////////////////////////////////////////////////////////////////////////
+
+function toTimeFormat(number) {
+    var content = ""
+    if (number >= 3600) {
+        if (number%3600 == 0) {
+            content = (number/3600).toString() + ' hr';
+        } else {
+            var minutes_seconds = minutesSplit(number%3600);
+            content = String(number%3600) + ' hr ' + minutes_seconds;
+        }
+    } else {
+        content = minutesSplit(number);
+    }
+
+    return content;
+}
+
+function minutesSplit(number) {
+    var content = ""
+    if (number >= 60) {
+        if (number%60 == 0) {
+            content = (number/60).toString() + ' min';
+        } else {
+            var minutes = Math.floor(number/60);
+            content = String(minutes) + ' min ' + String(number%60) + ' sec';
+        }
+    } else {
+        content = String(number) + ' sec';
+    }
+    return content;
 }
