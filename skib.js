@@ -371,7 +371,7 @@ function toTimeFormat(number) {
             content = (number/3600).toString() + ' hr';
         } else {
             var minutes_seconds = minutesSplit(number%3600);
-            content = String(number%3600) + ' hr ' + minutes_seconds;
+            content = Math.floor(String(number/3600)) + ' hr ' + minutes_seconds;
         }
     } else {
         content = minutesSplit(number);
