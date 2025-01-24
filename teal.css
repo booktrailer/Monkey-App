@@ -37,12 +37,12 @@ p {
 
 /* Timer Display */
 #time_num {
-    font-size: 2.5em;
-    color: #90e0ef;
+    font-size: 1.5em; /* Reduced font size */
+    color: #90e0ef; 
     font-weight: bold;
     margin: 20px auto;
     padding: 15px;
-    width: 200px;
+    width: 60%; /* Elongated width */
     border: 3px solid #00b4d8;
     border-radius: 10px;
     background-color: #142025;

@@ -37,20 +37,21 @@ p {
 
 /* Timer Display */
 #time_num {
-    font-size: 2.5em;
-    color: #ffd56b; /* Soft yellow for numbers */
+    font-size: 1.5em; /* Reduced font size */
+    color: #ffd56b; 
     font-weight: bold;
     margin: 20px auto;
     padding: 15px;
-    width: 200px;
-    border: 3px solid #ff7e5f; /* Warm orange border */
+    width: 60%; /* Elongated width */
+    border: 3px solid #ff7e5f;
     border-radius: 10px;
-    background-color: #522546; /* Dark plum background */
+    background-color: #522546;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     display: inline-block;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 /* Button Container */
 #button_container {

@@ -34,14 +34,13 @@ p {
     color: #f8dede;
 }
 
-/* Timer Display */
 #time_num {
-    font-size: 2.5em;
-    color: #ff7b7b;
+    font-size: 1.5em; /* Reduced font size */
+    color: #ff7b7b; 
     font-weight: bold;
     margin: 20px auto;
     padding: 15px;
-    width: 200px;
+    width: 60%; /* Elongated width */
     border: 3px solid #a83c3c;
     border-radius: 10px;
     background-color: #441c1c;
@@ -49,6 +48,7 @@ p {
     text-align: center;
     display: inline-block;
 }
+
 
 /* Button Container */
 #button_container {

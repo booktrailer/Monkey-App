@@ -35,19 +35,20 @@ p {
 /* Timer Display */
 /* Timer Display */
 #time_num {
-    font-size: 2.5em;
-    color: #e74c3c;
+    font-size: 1.5em; /* Reduced font size */
+    color: #e74c3c; 
     font-weight: bold;
     margin: 20px auto;
-    padding: 15px; /* Space inside the box */
-    width: 200px; /* Fixed width for consistency */
-    border: 3px solid #3498db; /* Blue border */
-    border-radius: 10px; /* Rounded corners */
-    background-color: #ecf0f1; /* Light background color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    text-align: center; /* Center the text inside the box */
-    display: inline-block; /* Keeps it from stretching full width */
+    padding: 15px;
+    width: 60%; /* Elongated width */
+    border: 3px solid #3498db;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
 }
+
 
 /* Button Container */
 #button_container {

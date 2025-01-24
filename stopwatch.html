@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Timerly</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <script src="stopwatch.js"></script>
+        <div id="stylestuff"><link rel="stylesheet" href="red.css"></div>
+
+    </head>
+    <body onload="startup_times()">
+        <h1>Timerly!</h1>
+        <p>An easy and simple stopwatch for any purpose</p>
+
+        <h1><div id="time_num">0.00 sec</div></h1>
+
+        <button onclick="start_stopwatch()">Start</button>
+        <button onclick="pause_stopwatch()" id="pause_button">Pause</button>
+        <button onclick="cancel()">Cancel</button>
+
+        <div id="theme-buttons">
+            <button onclick="swap_theme('light-blue')">Beach Theme</button>
+            <button onclick="swap_theme('red')">Dragon Theme</button>
+            <button onclick="swap_theme('teal')">Modern Theme</button>
+            <button onclick="swap_theme('sunset')">Sunset Theme</button>
+            <button onclick="swap_theme('forest')">Forest Theme</button>
+        </div>
+
+        <!-- upload sounds -->
+        
+    </body>
+</html>
