@@ -1,4 +1,4 @@
-var theTheme = 'no theme';
+var theTheme = null;
 stopwatch_time = 0.0;
 curr_time = 0;
 start_time = 0;
@@ -6,6 +6,21 @@ the_interval = 0;
 stopwatch_running = false;
 orig_time = 0;
 going = false;
+
+function on_startup() {
+    // load the themes
+    var loaded_themes = localStorage.getItem('themes');
+    console.log(loaded_themes);
+    if (!(loaded_themes)) {
+        console.log('not skib');
+        theTheme = 'red';
+        localStorage.setItem('themes', theTheme);
+    } else {
+        theTheme = loaded_themes;
+    }
+
+    set_theme();
+}
 
 function swap_theme(theme) {
     theTheme = theme;
